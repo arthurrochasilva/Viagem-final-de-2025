@@ -84,7 +84,9 @@
 
             if (currentIndex > 0) {
                 const prevDate = dates[currentIndex - 1];
-                navHtml += `<a href="day.html?date=${prevDate}" class="nav-arrow" title="Dia Anterior">⬅</a>`;
+                navHtml += `<a href="day.html?date=${prevDate}" class="nav-arrow" title="Dia Anterior">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                </a>`;
             } else {
                 navHtml += `<div style="width: 50px;"></div>`; // Spacer
             }
@@ -93,7 +95,9 @@
 
             if (currentIndex < dates.length - 1 && currentIndex !== -1) {
                 const nextDate = dates[currentIndex + 1];
-                navHtml += `<a href="day.html?date=${nextDate}" class="nav-arrow" title="Próximo Dia">➡</a>`;
+                navHtml += `<a href="day.html?date=${nextDate}" class="nav-arrow" title="Próximo Dia">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>`;
             } else {
                 navHtml += `<div style="width: 50px;"></div>`; // Spacer
             }
