@@ -285,7 +285,7 @@ const itineraryData = {
                 time: "11:30",
                 description: "Ônibus de São José dos Campos (SP) para Ubatuba (SP)",
                 details: "Chegada prevista: 14:40",
-                images: ["Imagens/Ubatuba.png"],
+                images: [{ src: "Imagens/Ubatuba.png", caption: "Ubatuba" }],
                 icon: "🚌"
             },
             {
