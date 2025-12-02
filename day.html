@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Planejamento</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-btn">⬅ Voltar</a>
+            <h1 id="page-title">Planejamento</h1>
+        </header>
+        <main id="list">
+            <!-- Content will be injected here -->
+        </main>
+    </div>
+
+    <script src="content.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const date = urlParams.get('date');
+        const content = itineraryData[date];
+        const list = document.getElementById('list');
+        const pageTitle = document.getElementById('page-title');
+
+        if (content) {
+            if (content.title) {
+                pageTitle.innerText = content.title;
+            }
+
+            let html = '<div class="timeline">';
+            content.events.forEach(event => {
+                html += `
+                        <div class="timeline-item">
+                            <div class="timeline-icon">${event.icon || '❤️'}</div>
+                            <div class="timeline-content">
+                                <span class="time">${event.time}</span>
+                                <p class="description">${event.description}</p>
+                                ${event.details ? `<p class="details">${event.details}</p>` : ''}
+                                ${event.images ? `
+                                    <div class="image-gallery">
+                                        ${event.images.map((imgItem, index) => {
+                    // Handle both string and object formats
+                    const src = typeof imgItem === 'string' ? imgItem : imgItem.src;
+                    const caption = typeof imgItem === 'string' ? '' : imgItem.caption;
+
+                    // Escape quotes
+                    const safeSrc = src.replace(/'/g, "\\'");
+
+                    // Prepare array for lightbox (normalize to objects)
+                    const normalizedImages = event.images.map(i =>
+                        typeof i === 'string' ? { src: i, caption: '' } : i
+                    );
+                    const safeImagesArray = JSON.stringify(normalizedImages).replace(/"/g, "&quot;");
+
+                    return `
+                                                <div class="img-wrapper">
+                                                    <img src="${src}" alt="${caption || 'Foto do local'}" onclick="openLightbox('${safeSrc}', ${safeImagesArray})">
+                                                    ${caption ? `<span class="img-caption">${caption}</span>` : ''}
+                                                </div>
+                                            `;
+                }).join('')}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                    `;
+            });
+            html += '</div>';
+
+            // Day Navigation Logic
+            const dates = Object.keys(itineraryData).sort();
+            const currentIndex = dates.indexOf(date);
+
+            // Format date for display (YYYY-MM-DD -> DD/MM/YYYY)
+            const [year, month, day] = date.split('-');
+            const formattedDate = `${day}/${month}/${year}`;
+
+            let navHtml = '<div class="day-navigation" style="margin-top: 30px; margin-bottom: 30px;">';
+
+            if (currentIndex > 0) {
+                const prevDate = dates[currentIndex - 1];
+                navHtml += `<a href="day.html?date=${prevDate}" class="nav-arrow" title="Dia Anterior">⬅</a>`;
+            } else {
+                navHtml += `<div style="width: 50px;"></div>`; // Spacer
+            }
+
+            navHtml += `<span class="date-display" style="font-size: 1.5rem; font-weight: bold; color: var(--accent-color);">${formattedDate}</span>`;
+
+            if (currentIndex < dates.length - 1 && currentIndex !== -1) {
+                const nextDate = dates[currentIndex + 1];
+                navHtml += `<a href="day.html?date=${nextDate}" class="nav-arrow" title="Próximo Dia">➡</a>`;
+            } else {
+                navHtml += `<div style="width: 50px;"></div>`; // Spacer
+            }
+            navHtml += '</div>';
+
+            html += navHtml;
+            list.innerHTML = html;
+
+        } else {
+            list.innerHTML = '<p style="text-align: center; color: #888; font-size: 1.2rem; margin-top: 50px;">Os planos para este dia ainda são um mistério... 🤫💖</p>';
+        }
+
+        // Lightbox Functions
+        let currentImages = [];
+        let currentImageIndex = 0;
+
+        function openLightbox(imgSrc, imagesArray) {
+            const modal = document.getElementById('lightboxModal');
+            const modalImg = document.getElementById('lightboxImg');
+            const captionText = document.getElementById('caption');
+
+            currentImages = imagesArray;
+            // Find index based on src
+            currentImageIndex = imagesArray.findIndex(img => img.src === imgSrc);
+
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+
+            // Set caption if available
+            if (currentImages[currentImageIndex].caption) {
+                captionText.innerHTML = currentImages[currentImageIndex].caption;
+            } else {
+                captionText.innerHTML = "";
+            }
+
+            updateNavButtons();
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').style.display = "none";
+        }
+
+        function changeImage(n) {
+            currentImageIndex += n;
+            if (currentImageIndex >= currentImages.length) {
+                currentImageIndex = 0;
+            }
+            if (currentImageIndex < 0) {
+                currentImageIndex = currentImages.length - 1;
+            }
+
+            const modalImg = document.getElementById('lightboxImg');
+            const captionText = document.getElementById('caption');
+
+            modalImg.src = currentImages[currentImageIndex].src;
+
+            if (currentImages[currentImageIndex].caption) {
+                captionText.innerHTML = currentImages[currentImageIndex].caption;
+            } else {
+                captionText.innerHTML = "";
+            }
+
+            updateNavButtons();
+        }
+
+        function updateNavButtons() {
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+
+            if (currentImages && currentImages.length > 1) {
+                prevBtn.style.display = "block";
+                nextBtn.style.display = "block";
+            } else {
+                prevBtn.style.display = "none";
+                nextBtn.style.display = "none";
+            }
+        }
+
+        // Close on outside click
+        window.onclick = function (event) {
+            const modal = document.getElementById('lightboxModal');
+            if (event.target == modal) {
+                closeLightbox();
+            }
+        }
+    </script>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+        <div id="caption" class="caption-container"></div>
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+</body>
+
+</html>
