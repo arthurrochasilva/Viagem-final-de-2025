@@ -211,9 +211,9 @@ const itineraryData = {
                 time: "Noite",
                 description: "Chegada ao hotel e Ano Novo na Vila Capivari",
                 images: [
-                    { src: "Imagens/Vista de cima.jpg", caption: "Vista do bairro" },
-                    { src: "Imagens/Arquitetura.jpg", caption: "Arquitetura do bairro" },
-                    { src: "Imagens/Centro de Capivari.jpg", caption: "Centro de Capivari" }
+                    { src: "Imagens/Vistadobairro.jpg", caption: "Vista de cima" },
+                    { src: "Imagens/Arquiteturadobairro.jpg", caption: "Arquitetura" },
+                    { src: "Imagens/CentrodeCapivari.jpg", caption: "Centro de Capivari" }
                 ],
                 icon: "✨"
             },
