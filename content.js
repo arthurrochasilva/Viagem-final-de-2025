@@ -252,7 +252,7 @@ const itineraryData = {
                 time: "Dia",
                 description: "Assistir o filme Família De Aluguel",
                 images: [{ src: "Imagens/FilmeFamiliaDeAluguel.jpg", caption: "Poster Família De Aluguel" }],
-                icon: "�️"
+                icon: "🎬"
             }
         ]
     },
