@@ -5,6 +5,7 @@ const itineraryData = {
             {
                 time: "15:15",
                 description: "Viagem de Rolim de Moura (RO) para Pimenta Bueno (RO)",
+                images: [{ src: "Imagens/RolimDeMoura.jpeg", caption: "Rolim de Moura" }],
                 icon: "🚗"
             },
             {
@@ -21,6 +22,7 @@ const itineraryData = {
             {
                 time: "07:50",
                 description: "Chegada em Cuiabá",
+                images: [{ src: "Imagens/Cuiaba.jpg", caption: "Cuiabá" }],
                 icon: "📍"
             },
             {
@@ -38,21 +40,24 @@ const itineraryData = {
             {
                 time: "16:00",
                 description: "Saída do hotel rumo ao aeroporto",
+                images: [
+                    { src: "Imagens/AeroportoCuiaba.jpg", caption: "Aeroporto de Cuiabá" }
+                ],
                 icon: "🚕"
             },
             {
                 time: "18:10",
                 description: "Avião de Cuiabá (MT) para Guarulhos (SP)",
                 details: "Chegada prevista: 21:45. <br><strong>Código da reserva: DGHRQF</strong>",
-                images: [
-                    { src: "Imagens/AeroportoCuiaba.jpg", caption: "Aeroporto de Cuiabá" },
-                    { src: "Imagens/AeroportoGarulhos.jpg", caption: "Aeroporto de Guarulhos" }
-                ],
+                images: [{ src: "Imagens/AviaoLatam.jpg", caption: "Avião LATAM" }],
                 icon: "✈️"
             },
             {
                 time: "21:45",
                 description: "Encontro no Aeroporto de Guarulhos! ❤️",
+                images: [
+                    { src: "Imagens/AeroportoGarulhos.jpg", caption: "Aeroporto de Guarulhos" }
+                ],
                 icon: "👩‍❤️‍💋‍👨"
             },
             {
@@ -64,6 +69,7 @@ const itineraryData = {
             {
                 time: "00:45",
                 description: "Chegada em casa! Banho, comida e descanso 🏠",
+                images: [{ src: "Imagens/H8.jpg", caption: "Lar doce lar ❤️" }],
                 icon: "💤"
             }
         ]
@@ -74,11 +80,13 @@ const itineraryData = {
             {
                 time: "Dia",
                 description: "Passeio pelo centro",
+                images: [{ src: "Imagens/CentroSJC.jpg", caption: "Centro de SJC" }],
                 icon: "🚶‍♀️"
             },
             {
                 time: "Noite",
                 description: "Jantar no restaurante <strong>Sukiya</strong> 🍜",
+                images: [{ src: "Imagens/Sukiya.jpg", caption: "Sukiya" }],
                 icon: "🍲"
             }
         ]
@@ -89,11 +97,13 @@ const itineraryData = {
             {
                 time: "Dia",
                 description: "Tour para conhecer o ITA",
+                images: [{ src: "Imagens/ITA.jpg", caption: "ITA" }],
                 icon: "🎓"
             },
             {
                 time: "Noite",
                 description: "Passeio no CenterVale Shopping",
+                images: [{ src: "Imagens/CenterValeShopping.jpg", caption: "CenterVale Shopping" }],
                 icon: "🛍️"
             }
         ]
@@ -155,7 +165,8 @@ const itineraryData = {
             },
             {
                 time: "Dia",
-                description: "Passear pelo Santuário Nacional",
+                description: "Passeio pelo Santuário Nacional de Nossa Senhora da Conceição Aparecida",
+                images: [{ src: "Imagens/Aparecida.jpg", caption: "Catedral Basílica de Nossa Senhora Aparecida" }],
                 icon: "⛪"
             },
             {
@@ -170,7 +181,8 @@ const itineraryData = {
         events: [
             {
                 time: "Dia",
-                description: "Fazer um piquenique",
+                description: "Piquenique",
+                images: [{ src: "Imagens/ParqueDaCidade.jpg", caption: "Parque Roberto Burle Marx - Parque da Cidade" }],
                 icon: "🍇"
             }
         ]
@@ -198,7 +210,17 @@ const itineraryData = {
             {
                 time: "Noite",
                 description: "Chegada ao hotel e Ano Novo na Vila Capivari",
+                images: [
+                    { src: "Imagens/Vista de cima.jpg", caption: "Vista do bairro" },
+                    { src: "Imagens/Arquitetura.jpg", caption: "Arquitetura do bairro" },
+                    { src: "Imagens/Centro de Capivari.jpg", caption: "Centro de Capivari" }
+                ],
                 icon: "✨"
+            },
+            {
+                time: "00:00",
+                description: "Feliz Ano Novo! 🎆🥂",
+                icon: "🎆"
             }
         ]
     },
@@ -268,8 +290,15 @@ const itineraryData = {
             },
             {
                 time: "Tarde",
-                description: "Aproveitar a Praia!",
+                description: "Aproveitar a Praia Tenório",
+                images: [{ src: "Imagens/PraiaTenorio.png", caption: "Praia Tenório" }],
                 icon: "🏖️"
+            },
+            {
+                time: "Noite",
+                description: "Passeio no Centro de Ubatuba",
+                images: [{ src: "Imagens/CentroUbatuba.jpg", caption: "Centro de Ubatuba" }],
+                icon: "🌃"
             }
         ]
     },
@@ -279,7 +308,14 @@ const itineraryData = {
             {
                 time: "Dia todo",
                 description: "Mais praia!",
+                images: [{ src: "Imagens/PraiaTenorio.png", caption: "Praia Tenório" }],
                 icon: "🏖️"
+            },
+            {
+                time: "Noite",
+                description: "Passeio no Centro de Ubatuba",
+                images: [{ src: "Imagens/CentroUbatuba.jpg", caption: "Centro de Ubatuba" }],
+                icon: "🌃"
             }
         ]
     },
@@ -289,7 +325,14 @@ const itineraryData = {
             {
                 time: "Dia todo",
                 description: "Mais praia!",
+                images: [{ src: "Imagens/PraiaTenorio.png", caption: "Praia Tenório" }],
                 icon: "🥥"
+            },
+            {
+                time: "Noite",
+                description: "Passeio no Centro de Ubatuba",
+                images: [{ src: "Imagens/CentroUbatuba.jpg", caption: "Centro de Ubatuba" }],
+                icon: "🌃"
             }
         ]
     },
@@ -298,8 +341,15 @@ const itineraryData = {
         events: [
             {
                 time: "Dia todo",
-                description: "Último dia inteiro na praia",
+                description: "Último dia inteiro na Praia",
+                images: [{ src: "Imagens/PraiaTenorio.png", caption: "Praia Tenório" }],
                 icon: "🌊"
+            },
+            {
+                time: "Noite",
+                description: "Despedida do Centro de Ubatuba",
+                images: [{ src: "Imagens/CentroUbatuba.jpg", caption: "Centro de Ubatuba" }],
+                icon: "🌃"
             }
         ]
     },
@@ -320,12 +370,13 @@ const itineraryData = {
             {
                 time: "Dia todo",
                 description: "Feliz Aniversário, meu amor! 🎂🎁🎈",
+                images: [{ src: "Imagens/Sammy.jpeg", caption: "Parabéns Sammy! ❤️" }],
                 icon: "👸"
             }
         ]
     },
     "2026-01-19": {
-        title: "Início da Volta 💔",
+        title: "Volta 💔",
         events: [
             {
                 time: "11:30",
