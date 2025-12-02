@@ -4,12 +4,12 @@ const itineraryData = {
         events: [
             {
                 time: "15:15",
-                description: "Viagem de Rolim de Moura (RO) para Pimenta Bueno (RO).",
+                description: "Viagem de Rolim de Moura (RO) para Pimenta Bueno (RO)",
                 icon: "🚗"
             },
             {
                 time: "17:15",
-                description: "Ônibus de Pimenta Bueno (RO) para Cuiabá (MT).",
+                description: "Ônibus de Pimenta Bueno (RO) para Cuiabá (MT)",
                 details: "Previsão de chegada: 07:50 (dia seguinte). <br><strong>Poltrona: 41</strong>",
                 icon: "🚌"
             }
@@ -20,12 +20,12 @@ const itineraryData = {
         events: [
             {
                 time: "07:50",
-                description: "Chegada em Cuiabá.",
+                description: "Chegada em Cuiabá",
                 icon: "📍"
             },
             {
                 time: "Manhã",
-                description: "Hospedagem no <strong>Hits Pantanal Hotel</strong>.",
+                description: "Hospedagem no <strong>Hits Pantanal Hotel</strong>",
                 images: [
                     "Imagens/FrenteHotelCuiaba.png",
                     "Imagens/QuartoHotelCuiaba.png",
@@ -37,12 +37,12 @@ const itineraryData = {
             },
             {
                 time: "16:00",
-                description: "Saída do hotel rumo ao aeroporto.",
+                description: "Saída do hotel rumo ao aeroporto",
                 icon: "🚕"
             },
             {
                 time: "18:10",
-                description: "Avião de Cuiabá (MT) para Guarulhos (SP).",
+                description: "Avião de Cuiabá (MT) para Guarulhos (SP)",
                 details: "Chegada prevista: 21:45. <br><strong>Código da reserva: DGHRQF</strong>",
                 images: [
                     { src: "Imagens/AeroportoCuiaba.jpg", caption: "Aeroporto de Cuiabá" },
@@ -57,13 +57,13 @@ const itineraryData = {
             },
             {
                 time: "23:15",
-                description: "Ônibus de Guarulhos (SP) para São José dos Campos (SP).",
-                details: "Chegada prevista: 00:45.",
+                description: "Ônibus de Guarulhos (SP) para São José dos Campos (SP)",
+                details: "Chegada prevista: 00:45",
                 icon: "🚌"
             },
             {
                 time: "00:45",
-                description: "Chegada em casa! Banho, comida e descanso. 🏠",
+                description: "Chegada em casa! Banho, comida e descanso 🏠",
                 icon: "💤"
             }
         ]
@@ -73,12 +73,12 @@ const itineraryData = {
         events: [
             {
                 time: "Dia",
-                description: "Passeio pelo centro.",
+                description: "Passeio pelo centro",
                 icon: "🚶‍♀️"
             },
             {
                 time: "Noite",
-                description: "Jantar no restaurante <strong>Sukiya</strong> 🍜.",
+                description: "Jantar no restaurante <strong>Sukiya</strong> 🍜",
                 icon: "🍲"
             }
         ]
@@ -93,7 +93,7 @@ const itineraryData = {
             },
             {
                 time: "Noite",
-                description: "Passeio no CenterVale Shopping.",
+                description: "Passeio no CenterVale Shopping",
                 icon: "🛍️"
             }
         ]
@@ -103,7 +103,7 @@ const itineraryData = {
         events: [
             {
                 time: "Dia",
-                description: "Aproveitar piscina. ☀️",
+                description: "Aproveitar piscina ☀️",
                 icon: "🏊‍♀️"
             },
             {
@@ -118,7 +118,7 @@ const itineraryData = {
         events: [
             {
                 time: "Dia todo",
-                description: "Celebração de Natal. ❤️",
+                description: "Celebração de Natal ❤️",
                 icon: "🎄"
             }
         ]
@@ -128,7 +128,7 @@ const itineraryData = {
         events: [
             {
                 time: "Dia",
-                description: "Assistir o filme Avatar: Fogo E Cinzas.",
+                description: "Assistir o filme Avatar: Fogo E Cinzas",
                 images: [{ src: "Imagens/FilmeAvatarFogoECinzas.jpg", caption: "Poster Avatar: Fogo E Cinzas" }],
                 icon: "🎬"
             }
@@ -139,7 +139,7 @@ const itineraryData = {
         events: [
             {
                 time: "Dia",
-                description: "Assistir o filme Sorry, Baby.",
+                description: "Assistir o filme Sorry, Baby",
                 images: [{ src: "Imagens/FilmeSorryBaby.jpg", caption: "Poster Sorry, Baby" }],
                 icon: "🎟️"
             }
@@ -150,13 +150,18 @@ const itineraryData = {
         events: [
             {
                 time: "Manhã",
-                description: "Ônibus de São José dos Campos (SP) para Aparecida (SP).",
+                description: "Viagem de São José dos Campos (SP) para Aparecida (SP)",
+                icon: "🚗"
+            },
+            {
+                time: "Dia",
+                description: "Passear pelo Santuário Nacional",
                 icon: "⛪"
             },
             {
                 time: "Noite",
-                description: "Ônibus de Aparecida (SP) para São José dos Campos (SP).",
-                icon: "🚌"
+                description: "Viagem de Aparecida (SP) para São José dos Campos (SP)",
+                icon: "🚗"
             }
         ]
     },
@@ -165,7 +170,7 @@ const itineraryData = {
         events: [
             {
                 time: "Dia",
-                description: "Fazer um piquenique.",
+                description: "Fazer um piquenique",
                 icon: "🍇"
             }
         ]
@@ -175,7 +180,7 @@ const itineraryData = {
         events: [
             {
                 time: "Dia",
-                description: "Assistir o filme Valor Sentimental.",
+                description: "Assistir o filme Valor Sentimental",
                 images: [{ src: "Imagens/FilmeValorSentimental.jpg", caption: "Poster Valor Sentimental" }],
                 icon: "🍿"
             }
@@ -186,13 +191,13 @@ const itineraryData = {
         events: [
             {
                 time: "15:30",
-                description: "Ônibus de São José dos Campos (SP) para Campos do Jordão (SP).",
-                details: "Chegada prevista: 17:00.",
+                description: "Ônibus de São José dos Campos (SP) para Campos do Jordão (SP)",
+                details: "Chegada prevista: 17:00",
                 icon: "🚌"
             },
             {
                 time: "Noite",
-                description: "Chegada ao hotel e Ano Novo na Vila Capivari.",
+                description: "Chegada ao hotel e Ano Novo na Vila Capivari",
                 icon: "✨"
             }
         ]
@@ -202,7 +207,7 @@ const itineraryData = {
         events: [
             {
                 time: "13:30",
-                description: "Ônibus de Campos do Jordão (SP) para São José dos Campos (SP).",
+                description: "Ônibus de Campos do Jordão (SP) para São José dos Campos (SP)",
                 details: "Chegada prevista: 15:30",
                 icon: "🚌"
             }
@@ -234,7 +239,7 @@ const itineraryData = {
         events: [
             {
                 time: "13:20",
-                description: "Ônibus de Piracicaba (SP) para São José dos Campos (SP).",
+                description: "Ônibus de Piracicaba (SP) para São José dos Campos (SP)",
                 details: "Chegada prevista: 17:30",
                 icon: "🚌"
             }
@@ -245,7 +250,7 @@ const itineraryData = {
         events: [
             {
                 time: "Dia",
-                description: "Assistir o filme Família De Aluguel.",
+                description: "Assistir o filme Família De Aluguel",
                 images: [{ src: "Imagens/FilmeFamiliaDeAluguel.jpg", caption: "Poster Família De Aluguel" }],
                 icon: "�️"
             }
@@ -256,8 +261,8 @@ const itineraryData = {
         events: [
             {
                 time: "11:30",
-                description: "Ônibus de São José dos Campos (SP) para Ubatuba (SP).",
-                details: "Chegada prevista: 14:40.",
+                description: "Ônibus de São José dos Campos (SP) para Ubatuba (SP)",
+                details: "Chegada prevista: 14:40",
                 images: ["Imagens/Ubatuba.png"],
                 icon: "🚌"
             },
@@ -293,7 +298,7 @@ const itineraryData = {
         events: [
             {
                 time: "Dia todo",
-                description: "Último dia inteiro na praia.",
+                description: "Último dia inteiro na praia",
                 icon: "🌊"
             }
         ]
@@ -303,8 +308,8 @@ const itineraryData = {
         events: [
             {
                 time: "15:50",
-                description: "Ônibus de Ubatuba (SP) para São José dos Campos (SP).",
-                details: "Chegada prevista: 19:30.",
+                description: "Ônibus de Ubatuba (SP) para São José dos Campos (SP)",
+                details: "Chegada prevista: 19:30",
                 icon: "🚌"
             }
         ]
@@ -324,19 +329,19 @@ const itineraryData = {
         events: [
             {
                 time: "11:30",
-                description: "Ônibus de São José dos Campos (SP) para Guarulhos (SP).",
+                description: "Ônibus de São José dos Campos (SP) para Guarulhos (SP)",
                 details: "Chegada prevista: 13:00",
                 icon: "🚌"
             },
             {
                 time: "16:25",
-                description: "Avião de Guarulhos (SP) para Cuiabá (MT).",
+                description: "Avião de Guarulhos (SP) para Cuiabá (MT)",
                 details: "Chegada prevista: 17:35",
                 icon: "✈️"
             },
             {
                 time: "21:55",
-                description: "Ônibus de Cuiabá (MT) para Pimenta Bueno (RO).",
+                description: "Ônibus de Cuiabá (MT) para Pimenta Bueno (RO)",
                 details: "Chegada prevista: 13:05 (dia seguinte)",
                 icon: "🚌"
             }
@@ -347,7 +352,7 @@ const itineraryData = {
         events: [
             {
                 time: "13:05",
-                description: "Chegada em Pimenta Bueno (RO).",
+                description: "Chegada em Pimenta Bueno (RO)",
                 icon: "📍"
             }
         ]
