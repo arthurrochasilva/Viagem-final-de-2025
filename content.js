@@ -220,7 +220,7 @@ const itineraryData = {
                 time: "09:00",
                 description: "São José dos Campos (SP) ➡️ Piracicaba (SP)",
                 details: "Chegada prevista: 12:45",
-                icon: "�"
+                icon: "🚌"
             }
         ]
     },
