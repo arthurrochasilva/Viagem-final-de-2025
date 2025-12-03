@@ -176,7 +176,7 @@ const itineraryData = {
             },
             {
                 time: "Dia",
-                description: "Escrever uma lista de 10 coisas que amam um no outro 📝",
+                description: "Escrever uma lista de 10 coisas que amamos um no outro 📝",
                 icon: "✍️"
             }
         ]
