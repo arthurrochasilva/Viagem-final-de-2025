@@ -1,15 +1,5 @@
 const itineraryData = {
-    "2025-12-03": {
-        title: "Thermas do Vale ☀️",
-        events: [
-            {
-                time: "Dia",
-                description: "Parque aquático Thermas do Vale",
-                images: [{ src: "Imagens/ThermasDoVale.jpg", caption: "Thermas do Vale" }],
-                icon: "🏊‍♂️"
-            }
-        ]
-    },
+
     "2025-12-20": {
         title: "O Começo da Viagem ❣️",
         events: [
@@ -297,22 +287,28 @@ const itineraryData = {
         ]
     },
     "2026-01-03": {
-        title: "Tour de Compras 🛍️",
+        title: "Parque aquático ☀️",
         events: [
             {
                 time: "Dia",
-                description: "Visitar mercados e escolher itens para nossa casa: Shopping da Utilidade, Havan, Sam's Club, Taust",
-                icon: "🛒"
+                description: "Ir no parque aquático Thermas do Vale",
+                images: [{ src: "Imagens/ThermasDoVale.jpg", caption: "Thermas do Vale" }],
+                icon: "🏊‍♂️"
             }
         ]
     },
     "2026-01-04": {
-        title: "Arte Juntos 🎨",
+        title: "Arte e Compras 🎨🛍️",
         events: [
             {
                 time: "Dia",
                 description: "Fazer desenhos juntos",
                 icon: "✏️"
+            },
+            {
+                time: "Tarde",
+                description: "Visitar mercados e escolher itens para nossa casa: Shopping da Utilidade, Havan, Sam's Club, Taust",
+                icon: "🛒"
             }
         ]
     },
