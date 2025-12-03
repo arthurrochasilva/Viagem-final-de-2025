@@ -1,11 +1,22 @@
 const itineraryData = {
+    "2025-12-03": {
+        title: "Thermas do Vale ☀️",
+        events: [
+            {
+                time: "Dia",
+                description: "Parque aquático Thermas do Vale",
+                images: [{ src: "Imagens/ThermasDoVale.jpg", caption: "Thermas do Vale" }],
+                icon: "🏊‍♂️"
+            }
+        ]
+    },
     "2025-12-20": {
         title: "O Começo da Viagem ❣️",
         events: [
             {
                 time: "15:15",
                 description: "Viagem de Rolim de Moura (RO) para Pimenta Bueno (RO)",
-                images: [{ src: "Imagens/RolimDeMoura.jpeg", caption: "Rolim de Moura" }],
+                images: [{ src: "Imagens/Rolim.jpg", caption: "Rolim de Moura" }],
                 icon: "🚗"
             },
             {
@@ -137,10 +148,20 @@ const itineraryData = {
         title: "Cinema: Avatar 🍿",
         events: [
             {
-                time: "Dia",
+                time: "Manhã",
                 description: "Assistir o filme Avatar: Fogo E Cinzas",
                 images: [{ src: "Imagens/FilmeAvatarFogoECinzas.jpg", caption: "Poster Avatar: Fogo E Cinzas" }],
                 icon: "🎬"
+            },
+            {
+                time: "Tarde",
+                description: "Leitura lado a lado ❤️",
+                icon: "📖"
+            },
+            {
+                time: "Noite",
+                description: "Jantar Aussie Chicken (iFood) 🍗",
+                icon: "🍔"
             }
         ]
     },
@@ -152,6 +173,11 @@ const itineraryData = {
                 description: "Assistir o filme Sorry, Baby",
                 images: [{ src: "Imagens/FilmeSorryBaby.jpg", caption: "Poster Sorry, Baby" }],
                 icon: "🎟️"
+            },
+            {
+                time: "Dia",
+                description: "Escrever uma lista de 10 coisas que amam um no outro 📝",
+                icon: "✍️"
             }
         ]
     },
@@ -184,6 +210,16 @@ const itineraryData = {
                 description: "Piquenique",
                 images: [{ src: "Imagens/ParqueDaCidade.jpg", caption: "Parque Roberto Burle Marx - Parque da Cidade" }],
                 icon: "🍇"
+            },
+            {
+                time: "Tarde",
+                description: "Fazer um treino juntos 💪",
+                icon: "🏋️"
+            },
+            {
+                time: "Noite",
+                description: "Fazer massagem um no outro 💆‍♂️💆‍♀️",
+                icon: "🕯️"
             }
         ]
     },
@@ -191,16 +227,31 @@ const itineraryData = {
         title: "Cinema: Valor Sentimental 🎥",
         events: [
             {
-                time: "Dia",
+                time: "Manhã",
                 description: "Assistir o filme Valor Sentimental",
                 images: [{ src: "Imagens/FilmeValorSentimental.jpg", caption: "Poster Valor Sentimental" }],
                 icon: "🍿"
+            },
+            {
+                time: "Tarde",
+                description: "Criar uma playlist juntos e dançar 🎶",
+                icon: "💃"
+            },
+            {
+                time: "Noite",
+                description: "Ver o pôr do sol 🌅",
+                icon: "🌇"
             }
         ]
     },
     "2025-12-31": {
         title: "Rumo a Campos do Jordão 🌲",
         events: [
+            {
+                time: "Manhã",
+                description: "Listar sonhos malucos que queremos realizar um dia ✨",
+                icon: "📝"
+            },
             {
                 time: "15:30",
                 description: "Ônibus de São José dos Campos (SP) para Campos do Jordão (SP)",
@@ -235,6 +286,36 @@ const itineraryData = {
             }
         ]
     },
+    "2026-01-02": {
+        title: "Dia de Jogos 🎮",
+        events: [
+            {
+                time: "Dia",
+                description: "Jogar jogos juntos: Uno, Roblox Parkour, Mímica, Adedonha, Desafio da meia",
+                icon: "🎲"
+            }
+        ]
+    },
+    "2026-01-03": {
+        title: "Tour de Compras 🛍️",
+        events: [
+            {
+                time: "Dia",
+                description: "Visitar mercados e escolher itens para nossa casa: Shopping da Utilidade, Havan, Sam's Club, Taust",
+                icon: "🛒"
+            }
+        ]
+    },
+    "2026-01-04": {
+        title: "Arte Juntos 🎨",
+        events: [
+            {
+                time: "Dia",
+                description: "Fazer desenhos juntos",
+                icon: "✏️"
+            }
+        ]
+    },
     "2026-01-05": {
         title: "Viagem para Piracicaba 🚌",
         events: [
@@ -264,6 +345,11 @@ const itineraryData = {
                 description: "Ônibus de Piracicaba (SP) para São José dos Campos (SP)",
                 details: "Chegada prevista: 17:30",
                 icon: "🚌"
+            },
+            {
+                time: "19:00",
+                description: "Feira noturna em São José dos Campos 🌙",
+                icon: "🏮"
             }
         ]
     },
@@ -361,6 +447,21 @@ const itineraryData = {
                 description: "Ônibus de Ubatuba (SP) para São José dos Campos (SP)",
                 details: "Chegada prevista: 19:30",
                 icon: "🚌"
+            }
+        ]
+    },
+    "2026-01-17": {
+        title: "Recordações 📸",
+        events: [
+            {
+                time: "Dia",
+                description: "Imprimir fotos da viagem",
+                icon: "🖼️"
+            },
+            {
+                time: "Dia",
+                description: "Conversa sobre a viagem",
+                icon: "💬"
             }
         ]
     },
